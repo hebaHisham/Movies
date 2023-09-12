@@ -1,0 +1,37 @@
+.searchArea{
+    border-radius: 50px;
+    --bs-border-width: 3px;
+ 
+}
+
+
+
+.sideBarMenu{
+    width:250px;
+    height: 100vh;
+    background-color: black;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:99999;
+    
+
+
+}
+ul{
+    list-style: none;
+}
+
+li{
+    padding:10px;
+   
+}
+
+.form-control{
+    background-color: transparent;
+}
+.form-control:focus{
+    background-color: transparent;
+    border-color: #e9ecef;
+} 
+
