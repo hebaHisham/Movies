@@ -161,6 +161,37 @@ $(document).ready(function () {
 
 
 
+    //----------TO TOP BUTTON
+
+    const topSpaceFromSection=$('#theSeparator').offset().top;
+
+    $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > topSpaceFromSection) {
+            
+            $('.backToTop').fadeIn(500).css('display', 'flex');
+    
+        }
+        else{
+
+            $('.backToTop').fadeOut(500).css('display', 'flex');
+
+        }
+    
+        
+    });
+
+    $('.backToTop').click(function(){
+        $(window).scrollTop(0);
+    })
+    
+    
+    
+
+
+
+
+
 
 
 })
