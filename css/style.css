@@ -9,9 +9,8 @@
 
 ul{
     list-style: none;
-    /* transition: 1s all; */
-
-    transform: translateY(100%);
+ 
+    
    
     
 
@@ -20,12 +19,8 @@ ul{
 li,.one, .two,.three,.four,.five,.six{
     padding:10px;
     cursor:pointer;
-    /* transition: 1s all; */
-
     
-
-     /* display:none;  */
-     opacity: 0;
+     
     
 
 
