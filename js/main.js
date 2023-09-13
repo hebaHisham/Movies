@@ -86,7 +86,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.six').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease', 
+                    'transition': 'all 1s ease', 
                     'opacity':'1'
                 });
             }, 1000);
@@ -95,7 +95,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.five').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease', 
+                    'transition': 'all 1s ease', 
                     'opacity':'1'
                 });
             }, 900);
@@ -103,7 +103,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.four').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease',
+                    'transition': 'all 1s ease',
                     'opacity':'1'
                 });
             }, 800);
@@ -111,7 +111,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.three').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease',
+                    'transition': 'all 1s ease',
                     'opacity':'1'
                 });
             }, 700);
@@ -119,7 +119,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.two').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease',
+                    'transition': 'all 1s ease',
                     'opacity':'1'
                 });
             }, 600);
@@ -127,7 +127,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $('.one').css({
                     'transform': `translateY(${-ulHeight}px)`,
-                    'transition': 'transform 1s ease' ,
+                    'transition': 'all 1s ease' ,
                     'opacity':'1'
                 });
             }, 500);
