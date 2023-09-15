@@ -1,4 +1,30 @@
+var allMovies = [];
+
 $(document).ready(function () {
+    // THE API PART
+
+
+
+    var getMoviesRequest = new XMLHttpRequest();
+    // ESTABLISHING A CONNECTION BETWEEN YOU AND THE BACKEND 
+    getMoviesRequest.open("GET", 'https://api.themoviedb.org/3/movie/popular?api_key=eba8b9a7199efdcb0ca1f96879b83c44');
+
+    getMoviesRequest.send();
+    getMoviesRequest.addEventListener('readystatechange', function () {
+        if (getMoviesRequest.readyState == 4 && getMoviesRequest.status == 200) {
+            allMovies = JSON.parse(getMoviesRequest.response).results;
+            console.log(allMovies);
+
+            displayAllMovies();
+
+        }
+
+    })
+
+
+
+
+
 
     const sidebarPartW = $('.SideBarPart').outerWidth();
 
@@ -162,6 +188,7 @@ $(document).ready(function () {
 
 
     //----------TO TOP BUTTON
+    // MAKING THE BUTTON DISAPPEAR ONCE WE REACH THE TOP
 
     const topSpaceFromSection = $('#theSeparator').offset().top;
 
@@ -181,6 +208,11 @@ $(document).ready(function () {
 
     });
 
+    
+    
+    
+    
+    // SCROLLING TO THE TOP BUTTON FUNCTIONALITY
     $('.backToTop').click(function () {
         $(window).scrollTop(0);
     })
@@ -189,65 +221,6 @@ $(document).ready(function () {
 
 
     //============================
-    //MOVIE POSTER ANIMATION
-
-    // $('.imageContainer').hover(function(){
-    //     $('.testImage').css({"transform":"scale(1.2) rotate(10deg)","transition": "all 1s"});
-    //     $('.imageContainer').css('overflow','hidden');
-    //     $('.imageContent').fadeIn(10000)
-
-    //     });
-
-
-
-    // })
-
-    $('.imageContainer').hover(function () {
-       
-        /*some changes*/
-        
-       
-
-
-
-
-
-        $('.imageLayer').fadeIn(1000);
-
-
-
-
-
-
-        $(this).children('img').css({
-
-            "transform": "scale(1.2) rotate(10deg)",
-            "transition": "all 1s"
-
-
-        }
-
-
-        )
-        $('.imageContainer').css('overflow', 'hidden');
-        $('.imageLayer').children('h1').animate({
-            "top": "0px",
-
-
-        }, 1000)
-
-        $('.imageLayer').children('span').animate({
-            "top": "0"
-
-        }, 1000)
-
-        // $('.imageLayer').children('p').css({
-        //   "transform":"skewX(10deg)",
-        //   "transition": "all 1s"
-
-
-
-        // },1000)
 
 
 
@@ -257,62 +230,6 @@ $(document).ready(function () {
 
 
 
-    }, function () {
-
-        $('.imageLayer').children('h1').animate({
-            "right": "100%"
-
-        }, 1000)
-
-        $('.imageLayer').children('p').animate({
-            "right": "100%"
-        }, 1000)
-
-        $('.imageLayer').children('span').animate({
-            "right": "100%"
-        }, 1000)
-
-        $('.imageLayer').fadeOut(1000,function(){
-            $(this).children('h1').css({
-                "color": "red",
-                "position": "relative",
-                "top": "-100%",
-    
-                "right": "0"
-    
-            })
-    
-            $(this).children('p').css({
-                "position": "relative",
-    
-                "right": "0"
-    
-    
-    
-            })
-            
-            $(this).children('span').css({
-                "color": "red",
-                "position": "relative",
-                "top": "100%",
-                "right": "0"
-    
-            })
-        });
-        $(this).children('img').css({
-
-            "transform": "scale(1) rotate(0)",
-            "transition": "all 1s"
-
-
-        })
-
-
-
-
-
-    }
-    );
 
 
 
@@ -325,6 +242,36 @@ $(document).ready(function () {
 
 
 })
+
+// DISPLAYING ALL MOVIES FUNCTION
+function displayAllMovies() {
+    var cartona = "";
+
+    for (var i = 0; i < allMovies.length; i++) {
+
+        cartona += `
+        
+    <div class="col-md-4">
+        <div class="movieContainer bg-info">
+            <div class="imageContainer bg-danger">
+                <img class="testImage img-fluid" src="https://image.tmdb.org/t/p/w500/${allMovies[i].poster_path}"
+                    alt="profile" />
+           
+            </div>
+
+
+
+        </div>
+
+
+    </div>`
+
+    }
+
+    document.querySelector('.row').innerHTML = cartona;
+
+}
+
 
 
 
