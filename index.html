@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
-<body class="bg-black">
-    <div class="HomePage bg-black">
-        <div class="SearchSec bg-black d-flex justify-content-center align-items-center p-4">
+<body>
+    <div class="HomePage" id="home">
+        <div class="SearchSec d-flex justify-content-center align-items-center p-4">
             <form class="d-flex" role="search">
                 <input class="searchArea form-control text-white" size="50" type="search" placeholder="Search"
                     aria-label="Search">
@@ -30,9 +30,21 @@
             <div class="row gy-4">
                 <div class="col-md-4">
                     <div class="movieContainer bg-info">
-                        <div class="ImageContainer">
-                            <img class="w-100" src="./Images3/Screenshot 2023-09-11 at 12.48.21 PM.png" alt="profile" />
+                        <div class="imageContainer">
+                            <img class="testImage w-100" src="./Images3/Screenshot 2023-09-11 at 12.48.21 PM.png" alt="profile" />
+                            <div class="imageLayer">
+                              
+                                <h1 class="movieTitle text-center">Barbie</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut natus repudiandae beatae
+                                    nam unde obcaecati quo libero esse, nemo voluptatibus et deserunt quod dicta rem
+                                    vitae? Aliquam est impedit saepe?</p>
+                                <span>Release Date: 2023-07-19</span>
+
+
+                            </div>
                         </div>
+
+
 
                     </div>
 
@@ -48,7 +60,7 @@
 
                 </div>
                 <div class="col-md-4">
-                    <div class="movieContainer bg-info" >
+                    <div class="movieContainer bg-info">
                         <div class="ImageContainer">
                             <img class="w-100" src="./Images3/Screenshot 2023-09-11 at 12.48.21 PM.png" alt="profile" />
                         </div>
@@ -90,47 +102,122 @@
 
 
 
+
+
+
+
+            <!--THE FORM-->
+
+            <div class="formSection" id="formS">
+                <div class="container text-white">
+                    <h2>Contact US</h2>
+
+                </div>
+
+                <div class="form  d-flex flex-column align-items-center w-100 ">
+
+                    <div class="row  w-100">
+                        <div class="col-md-6">
+
+                            <input class="w-100" type="text" id="fname" name="fname" placeholder="Enter Your Name">
+                            <label for="fname"></label><br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <input class="w-100" type="email" id="email" name="email" placeholder="Enter Your Email">
+                            <label for="email"></label><br>
+
+                        </div>
+
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-md-6">
+
+                            <input class="w-100" type="number" id="phone" name="phone" placeholder="Enter Your Phone">
+                            <label for="phone"></label><br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <input class="w-100" type="number" id="age" name="age" placeholder="Enter Your Age">
+                            <label for="age"></label><br>
+
+                        </div>
+
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-md-6">
+
+                            <input class="w-100" type="password" id="password" name="password"
+                                placeholder="Enter Your Password">
+                            <label for="password"></label><br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <input class="w-100" type="password" id="rpassword" name="rpassword"
+                                placeholder="Re-enter Your Password">
+                            <label for="rpassword"></label><br>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+                <input class="btn ms-3 px-3" type="submit" value="Submit">
+
+
+
+            </div>
+
+
+
         </div>
 
-        
-        
+
+
         <!--THE SIDEBAR-->
-        
+
         <div class="SideBarPart position-fixed top-0 bottom-0 bg-black ">
-            <div class="sideBarMenu text-white d-flex flex-column bg-black justify-content-between position-relative w-100 h-100">
+            <div
+                class="sideBarMenu text-white d-flex flex-column bg-black justify-content-between position-relative w-100 h-100">
                 <ul class="py-4 ">
-                    <li class="one">Now playing</li>
-                    <li class="two">Popular</li>
-                    <li class="three">Top Rated</li>
-                    <li class="four">Trending</li>
-                    <li class="five">Upcoming</li>
-                    <li class="six">Contact Us</li>
+                    <li class="one"><a href="#home"> Now playing</a></li>
+                    <li class="two"><a href=""> Popular</a></li>
+                    <li class="three"><a href=""> Top Rated</a></li>
+                    <li class="four"><a href=""> Trending</a></li>
+                    <li class="five"><a href=""> Upcoming</a></li>
+                    <li class="six"><a href="#formS"> Contact Us</a></li>
+
                 </ul>
-        
+
                 <div class="sideBarMenuBottom">
                     <div class="sideBarMenuIcons d-flex">
                         <i class="myIcon fa-brands fa-facebook-f ps-4"></i>
                         <i class="myIcon fa-brands fa-twitter ps-3"></i>
                         <i class="myIcon fa-solid fa-globe ps-3"></i>
-        
-        
-        
-        
+
+
+
+
                     </div>
-        
+
                     <div class="sideBarMenuBottomContent">
                         <p class="pt-3">Copyright © 2022 All Rights <br>Reserved.<br> Created by
-                            <a href="https://github.com/hebaHisham" class="link-danger fw-bold" target="_blank">Heba Hisham</a>
+                            <a href="https://github.com/hebaHisham" class="link-danger fw-bold" target="_blank">Heba
+                                Hisham</a>
                         </p>
                     </div>
                 </div>
-        
-        
-                <div class="sideBarMenuTogglePart p-4 bg-white position-absolute  d-flex flex-column justify-content-between align-items-center text-black">
+
+
+                <div
+                    class="sideBarMenuTogglePart p-4 bg-white position-absolute  d-flex flex-column justify-content-between align-items-center text-black">
                     <div class="otherIcons d-flex justify-content-center">
                         <i class="myIcon fa-solid fa-globe "></i>
-                       
-                        
+
+
 
                     </div>
                     <fiv class="changingIcon">
@@ -141,16 +228,16 @@
                     <div class="otherIcons">
                         <i class="myIcon fa-solid fa-globe"></i>
                         <i class="fa-solid fa-share-nodes"></i>
-                        
+
 
                     </div>
-                   
-        
-        
-        
+
+
+
+
                 </div>
-        
-        
+
+
             </div>
 
         </div>
@@ -161,13 +248,34 @@
             <i class="fa-solid fa-arrow-up"></i>
         </div>
 
-        
+
+
+
+
 
 
 
     </div>
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
 
 
 
