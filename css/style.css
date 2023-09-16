@@ -145,6 +145,64 @@ h2 {
 
 /*========================*/
 
+.imageContainer {
+    position: relative;
+}
+
+.imageLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+
+
+    /*INDICATING THE INITIAL STATE*/
+    display: none;
+
+
+}
+
+/*INDICATING THE INITAL STATES OF H1 P AND SPAN*/
+h1 {
+    position: relative;
+    bottom: 100%;
+    /* left: 0; */
+    right:0;
+   
+}
+
+.imageLayer p{
+    position:relative;
+    display: none;
+    right:0;
+}
+
+span{
+    position:relative;
+    top: 100%;
+    right:0;
+}
+
+.imageContainer{
+    overflow: hidden;
+}
+label{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+/*=========================*/
+
 
 
 
@@ -153,23 +211,35 @@ h2 {
 
 @keyframes skewAnimation {
     0% {
-      transform: skewY(0deg);
-      transform: skewX(0deg);
+        transform: skewY(0deg);
+        transform: skewX(0deg);
     }
 
     50% {
-      transform: skewY(10deg);
-      transform: skewX(10deg);
+        transform: skewY(10deg);
+        transform: skewX(10deg);
     }
+
     100% {
-      transform: skewY(0deg);
-      transform: skewX(0deg);
+        transform: skewY(0deg);
+        transform: skewX(0deg);
     }
-  }
-  
-  .imageLayer:hover p {
+}
+
+.imageLayer:hover p {
     animation: skewAnimation 0.5s 2;
-    transition: none; /* Remove the transition property */
-  }
-  
+    transition: none;
+    /* Remove the transition property */
+}
+
+.buttonContainer{
+    position:relative;
+}
+
+.submitBtn{
+    /*might change that later*/
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
 

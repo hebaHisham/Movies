@@ -18,7 +18,7 @@
     <div class="HomePage" id="home">
         <div class="SearchSec d-flex justify-content-center align-items-center p-4">
             <form class="d-flex" role="search">
-                <input class="searchArea form-control text-white" size="50" type="search" placeholder="Search"
+                <input class="searchArea form-control text-white" onkeydown="searchMoviesMethod(this.value)" size="50" type="search" placeholder="Search"
                     aria-label="Search">
 
             </form>
@@ -28,7 +28,13 @@
 
         <div class="container" id="theSeparator">
             <div class="row g-4">
-            
+
+
+                
+
+
+
+
             </div>
 
 
@@ -39,7 +45,7 @@
 
             <!--THE FORM-->
 
-            <div class="formSection" id="formS">
+            <div class="formSection bg-warning" id="formS">
                 <div class="container text-white">
                     <h2>Contact US</h2>
 
@@ -50,27 +56,13 @@
                     <div class="row  w-100">
                         <div class="col-md-6">
 
-                            <input class="w-100" type="text" id="fname" name="fname" placeholder="Enter Your Name">
-                            <label for="fname"></label><br>
+                            <input class="w-100" oninput="validateName(this.value)" type="text" id="fname" name="fname" placeholder="Enter Your Name">
+                            <label class="text-danger" for="fname"></label><br>
 
                         </div>
                         <div class="col-md-6">
-                            <input class="w-100" type="email" id="email" name="email" placeholder="Enter Your Email">
-                            <label for="email"></label><br>
-
-                        </div>
-
-                    </div>
-                    <div class="row w-100">
-                        <div class="col-md-6">
-
-                            <input class="w-100" type="number" id="phone" name="phone" placeholder="Enter Your Phone">
-                            <label for="phone"></label><br>
-
-                        </div>
-                        <div class="col-md-6">
-                            <input class="w-100" type="number" id="age" name="age" placeholder="Enter Your Age">
-                            <label for="age"></label><br>
+                            <input class="w-100" oninput="validateEmail(this.value)" type="email" id="email" name="email" placeholder="Enter Your Email">
+                            <label class="text-danger" for="email"></label><br>
 
                         </div>
 
@@ -78,15 +70,29 @@
                     <div class="row w-100">
                         <div class="col-md-6">
 
-                            <input class="w-100" type="password" id="password" name="password"
+                            <input class="w-100" oninput="validatePhone(this.value)"type="number" id="phone" name="phone" placeholder="Enter Your Phone">
+                            <label class="text-danger" for="phone"></label><br>
+
+                        </div>
+                        <div class="col-md-6">
+                            <input class="w-100" oninput="validateAge(this.value)" type="number" id="age" name="age" placeholder="Enter Your Age">
+                            <label class="text-danger" for="age"></label><br>
+
+                        </div>
+
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-md-6">
+
+                            <input class="w-100" oninput="validatePassword(this.value)" type="password" id="password" name="password"
                                 placeholder="Enter Your Password">
-                            <label for="password"></label><br>
+                            <label class="text-danger" for="password"></label><br>
 
                         </div>
                         <div class="col-md-6">
-                            <input class="w-100" type="password" id="rpassword" name="rpassword"
+                            <input class="w-100" oninput="validateRPassword(this.value)" type="password" id="rpassword" name="rpassword"
                                 placeholder="Re-enter Your Password">
-                            <label for="rpassword"></label><br>
+                            <label class="text-danger" for="rpassword"></label><br>
 
                         </div>
 
@@ -96,7 +102,11 @@
 
 
                 </div>
-                <input class="btn ms-3 px-3" type="submit" value="Submit">
+                <div class="buttonContainer bg-info">
+                    <input onmouseover="animateBtn()" class="submitBtn btn ms-3 px-3" type="submit" value="Submit">
+
+                </div>
+                
 
 
 
@@ -225,6 +235,7 @@
 
     <script src="./js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 
